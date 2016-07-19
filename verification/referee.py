@@ -45,9 +45,13 @@ api.add_listener(
         tests=TESTS,
         cover_code={
             'python-27': cover,
-            'python-3': cover
+            'python-3': cover,
+            'js-node': cover_codes.js_unwrap_args
         },
-        function_name="broken_clock"
+        function_name={
+            "python": "broken_clock",
+            "js": "brokenClock"
+        }
         # checker=None,  # checkers.float.comparison(2)
         # add_allowed_modules=[],
         # add_close_builtins=[],

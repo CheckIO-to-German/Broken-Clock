@@ -19,12 +19,19 @@ As&iacute; que la respuesta es &quot;00: 00: 22.5&quot;, y despu&eacute;s de red
 
 <div class="for_info_only">
     <strong>Ejemplo:</strong>
-<textarea data-code="python">broken_clock('00:00:00', '00:00:15', '+5 seconds at 10 seconds') ==  '00:00:10'
+<pre class="brush: python">{% if interpreter.slug == "js-node" %}
+brokenClock('00:00:00', '00:00:15', '+5 seconds at 10 seconds') ==  '00:00:10'
+brokenClock('06:10:00', '06:10:15', '-5 seconds at 10 seconds') ==  '06:10:30'
+brokenClock('13:00:00', '14:01:00', '+1 second at 1 minute') ==  '14:00:00'
+brokenClock('01:05:05', '04:05:05', '-1 hour at 2 hours') ==  '07:05:05'
+brokenClock('00:00:00', '00:00:30', '+2 seconds at 6 seconds') ==  '00:00:22'
+{% else %}
+broken_clock('00:00:00', '00:00:15', '+5 seconds at 10 seconds') ==  '00:00:10'
 broken_clock('06:10:00', '06:10:15', '-5 seconds at 10 seconds') ==  '06:10:30'
 broken_clock('13:00:00', '14:01:00', '+1 second at 1 minute') ==  '14:00:00'
 broken_clock('01:05:05', '04:05:05', '-1 hour at 2 hours') ==  '07:05:05'
 broken_clock('00:00:00', '00:00:30', '+2 seconds at 6 seconds') ==  '00:00:22'
-</textarea>
+{% endif %}</pre>
 </div>
 
 <p class="for_info_only"><strong>&iquest;C&oacute;mo se usa?: </strong> As&iacute; no lo creas, esta misi&oacute;n te est&aacute; ense&ntilde;ando algunos principios utilizados en la localizaci&oacute;n por GPS. Debido a que los sat&eacute;lites en &oacute;rbita se mueven muy r&aacute;pido, es necesario tener en cuenta la relatividad. As&iacute;, cuando tenemos en cuenta la velocidad del sat&eacute;lite, se puede estimar la diferencia con respecto a la hora en la tierra y escribir un programa para compensar.</p>
