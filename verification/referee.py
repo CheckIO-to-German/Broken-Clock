@@ -50,7 +50,7 @@ api.add_listener(
         },
         function_name={
             "python": "broken_clock",
-            "js": "brokenСlock"
+            "js": "brokenClock"
         }
         # checker=None,  # checkers.float.comparison(2)
         # add_allowed_modules=[],
