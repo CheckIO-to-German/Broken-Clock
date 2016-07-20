@@ -1,7 +1,7 @@
 "use strict";
 
-function brokenClock(numbers){
-    return numbers
+function brokenClock(startingTime, wrongTime, errorDescription){
+    return "00:59:59"
 }
 
 var assert = require('assert');
